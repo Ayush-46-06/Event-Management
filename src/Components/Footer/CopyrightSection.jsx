@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const CopyrightSection = () => {
   return (
-    <div className='mt-3 flex justify-between'>
-        <h4>Copyright &copy; 2025 Graphura, All rights reserved</h4>
+    <div className='mt-3 flex justify-between flex-wrap copyright'>
+        <h4 className='mb-3 md:text-[16px] text-[14px]'>Copyright &copy; 2025 Graphura, All rights reserved</h4>
 
-        <ul className='flex gap-5 text-gray-400'>
-            <li className='hover:text-white cursor-pointer'>
-                <Link to='/contact'>Term of use</Link>
+        <ul className='flex gap-5 text-gray-500'>
+            <li className='hover:text-black cursor-pointer md:text-[16px] text-[13px]'>
+                <Link to=''>Term of use</Link>
             </li>
-            <li className='hover:text-white cursor-pointer'>
+            <li className='hover:text-black cursor-pointer md:text-[16px] text-[13px]'>
                 <Link to=''>Privacy Policy</Link>
             </li>
-            <li className='hover:text-white cursor-pointer'>
+            <li className='hover:text-black cursor-pointer md:text-[16px] text-[13px]'>
                 <Link to=''>Cookie Policy</Link>
             </li>
         </ul>

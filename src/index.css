@@ -5,3 +5,11 @@
     --text: #010004;
     --btn: #57699b
 }
+
+
+/* Footer Copyright Section */
+@media (max-width: 340px){
+    .copyright ul li{
+        font-size: 10px;
+    }
+}

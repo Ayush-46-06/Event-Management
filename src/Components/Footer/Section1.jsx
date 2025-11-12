@@ -3,7 +3,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
-import logo from "../../assets/logo White.png"
+import logo from "../../assets/logo Black.png"
 
 const Section1 = () => {
   return (

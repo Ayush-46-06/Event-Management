@@ -143,7 +143,7 @@ const Form = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg hover:bg-blue-700 cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
           >
             Send Message
           </button>

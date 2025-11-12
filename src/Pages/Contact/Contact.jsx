@@ -19,7 +19,7 @@ const Contact = () => {
         {/* Centered text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="max-w-2xl text-lg leading-relaxed">
+          <p className="max-w-2xl sm:text-lg text-[12px] leading-relaxed">
             We're here to help you plan your perfect event.  
             Reach out to our friendly support team anytime.
           </p>
@@ -28,8 +28,9 @@ const Contact = () => {
 
       <div className='w-full bg-gray-50 mb-16'>
         <Form />
-        <Map />
       </div>
+
+      <Map />
     </section>
   );
 }
