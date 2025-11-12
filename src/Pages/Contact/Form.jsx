@@ -104,11 +104,13 @@ const Form = () => {
               type="text"
               placeholder="Name"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
             <input
               type="email"
               placeholder="Email"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
            
           </div>
@@ -130,6 +132,7 @@ const Form = () => {
             type="text"
             placeholder="Subject"
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
           />
 
           <textarea
@@ -140,7 +143,7 @@ const Form = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
           >
             Send Message
           </button>
