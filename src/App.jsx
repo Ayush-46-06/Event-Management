@@ -1,9 +1,13 @@
 import React from 'react'
+import Events from './Events'
+import { Route, Router, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
-      App
+        <Routes>
+          <Route path='/cultural' element={<Events />} />          
+        </Routes>
     </div>
   )
 }
