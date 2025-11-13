@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Section2 = () => {
   return (
@@ -17,21 +18,37 @@ const Section2 = () => {
             </div>
         </div>
         <div>
-            <h4 className='text-xl font-bold mb-3'>Get Started</h4>
+            <h4 className='text-xl font-bold mb-3'>Quick Links</h4>
             <ul className='text-gray-500'>
-                <li><a href="">Startups</a></li>
-                <li><a href="">Business Payment</a></li>
-                <li><a href="">Growing Businesses</a></li>
-                <li><a href="">Enterprise</a></li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="" className=''>Home</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">Event</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">Gallery</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">About</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="/contact">Contact</Link>
+                </li>
             </ul>
         </div>
         <div>
             <h4 className='text-xl font-bold mb-3'>Support</h4>
             <ul className='text-gray-500'>
-                <li><a href="">Help Center</a></li>
-                <li><a href="">My Account</a></li>
-                <li><a href="">Ticket Support</a></li>
-                <li><a href="">Contact us</a></li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">Help Center</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">My Account</Link>
+                </li>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                  <Link to="">Ticket Support</Link>
+                </li>
             </ul>
         </div>
         
