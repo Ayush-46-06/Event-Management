@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
 const Section2 = () => {
   return (
@@ -20,19 +21,24 @@ const Section2 = () => {
         <div>
             <h4 className='text-xl font-bold mb-3'>Quick Links</h4>
             <ul className='text-gray-500'>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                  <ChevronRight className='h-5' />
                   <Link to="" className=''>Home</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                  <ChevronRight className='h-5' />
                   <Link to="">Event</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                  <ChevronRight className='h-5' />
                   <Link to="">Gallery</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                  <ChevronRight className='h-5' />
                   <Link to="">About</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
+                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                  <ChevronRight className='h-5' />
                   <Link to="/contact">Contact</Link>
                 </li>
             </ul>
