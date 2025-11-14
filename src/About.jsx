@@ -57,10 +57,10 @@ const About = () => {
                                 transition={{ duration: 1.2, ease: "easeOut" }}
                                 className="text-lg md:text-xl text-white font-semibold md:max-w-3xl leading-relaxed drop-shadow"
                             >
-                                We don’t just plan events — we craft unforgettable experiences that
+                                We don’t just plan events "We craft unforgettable experiences that
                                 inspire, connect, and celebrate life. From concept to perfection,
                                 every detail is shaped with passion and precision to create moments
-                                that spark joy, build memories, and tell stories worth remembering.
+                                that spark joy, build memories, and tell stories worth remembering".
                             </motion.p>
 
                         </div>

@@ -54,7 +54,7 @@ const Testimonial = () => {
                 >
                     {testimonials.map((t, i) => (
                         <SwiperSlide key={i}>
-                            <div className="bg-white/70 backdrop-blur-lg shadow-lg rounded-2xl p-6 
+                            <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 backdrop-blur-lg shadow-lg rounded-2xl p-6 
                 border border-white/40 text-left flex flex-col items-start 
                 hover:-translate-y-2 transition-all duration-300">
 
@@ -62,7 +62,7 @@ const Testimonial = () => {
                                     “{t.text}”
                                 </p>
 
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100">
                                     <img
                                         src={t.img}
                                         alt={t.name}
