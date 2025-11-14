@@ -13,7 +13,7 @@ const Form = () => {
    <div className="max-w-1xl sm:max-w-6xl mx-auto sm:px-6 px-1 mb-20">
 
     {/* Main card container */}
-    <div className="grid md:grid-cols-2 gap-8 bg-white rounded-2xl shadow-lg border border-gray-200 relative sm:-mt-[100px] -mt-[80px]">
+    <div className="grid md:grid-cols-2 gap-8 bg-white rounded-2xl shadow-lg border border-gray-200 relative sm:-mt-[100px] -mt-[80px] contactForm">
 
       {/* Left side - contact info */}
       <div className='p-8 bg-[#e1e7f3] rounded-2xl'>
@@ -56,41 +56,41 @@ const Form = () => {
 
         {/* Social icons */}
         <div className="mt-8 flex space-x-4">
-            {/* Facebook */}
-            <Link
-                to="https://www.facebook.com/Graphura.in?rdid=ChlLZKbRZpHi39kB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19nKAMTopZ%2F#"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-[#FF6F61] transition duration-300"
-                target='blank'
-            >
-                <FaFacebookF />
-            </Link>
-
-            {/* Twitter */}
-            <Link
-                to="https://x.com/Graphura"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-[#FF6F61] transition duration-300"
-                target='blank'
-            >
-                <FaTwitter />
-            </Link>
-
-            {/* Instagram */}
-            <Link
-                to="https://www.instagram.com/graphura.in?igsh=MXNqNmtidzljNDJlag%3D%3D"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-[#FF6F61] transition duration-300"
-                target='blank'
-            >
-              <GrInstagram />
-            </Link>
-
-            {/* LinkedIn */}
-            <Link
-                to="https://www.linkedin.com/company/graphura-india-private-limited/posts/?feedView=all"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-[#FF6F61] transition duration-300"
-                target='blank'
-            >
-                <FaLinkedinIn />
-            </Link>
+          {/* Facebook */}
+          <Link
+            to="https://www.facebook.com/Graphura.in?rdid=ChlLZKbRZpHi39kB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19nKAMTopZ%2F#"
+            className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:scale-110 transition duration-300 flex-shrink-0"
+            target="blank"
+          >
+            <FaFacebookF />
+          </Link>
+            
+          {/* Twitter */}
+          <Link
+            to="https://x.com/Graphura"
+            className="flex items-center justify-center w-12 h-12 bg-[#579DF9] text-white rounded-full hover:scale-110 transition duration-300 flex-shrink-0"
+            target="blank"
+          >
+            <FaTwitter />
+          </Link>
+            
+          {/* Instagram */}
+          <Link
+            to="https://www.instagram.com/graphura.in?igsh=MXNqNmtidzljNDJlag%3D%3D"
+            className="flex items-center justify-center w-12 h-12 bg-[#D1226E] text-white rounded-full hover:scale-110 transition duration-300 flex-shrink-0"
+            target="blank"
+          >
+            <GrInstagram />
+          </Link>
+            
+          {/* LinkedIn */}
+          <Link
+            to="https://www.linkedin.com/company/graphura-india-private-limited/posts/?feedView=all"
+            className="flex items-center justify-center w-12 h-12 bg-[#146CC6] text-white rounded-full hover:scale-110 transition duration-300 flex-shrink-0"
+            target="blank"
+          >
+            <FaLinkedinIn />
+          </Link>
         </div>
 
       </div>

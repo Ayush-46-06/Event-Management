@@ -1,61 +1,75 @@
 import React from 'react';
-import { FaLocationDot } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const Section2 = () => {
   return (
     <div className='mt-8 grid xl:grid-cols-2'>
       {/* Left Content */}
       <div className='left grid sm:grid-cols-3 gap-10 mb-10'>
+        {/* Head Office address */}
         <div>
-            <h4 className='text-xl font-bold mb-3'>Head Offce</h4>
-            <p className='text-gray-500 mb-2'>near Renu Sharma Foundation, Pataudi, Gurgaon, Haryana 122503</p>
-            <p className='text-gray-500 mb-2'>Gurgaon</p>
-
-            <div className='flex gap-1 place-items-center'>
-                <FaLocationDot />
-                Branch Location
-            </div>
+          <h4 className='text-xl font-bold mb-3'>Head Office</h4>
+          <ul className='text-gray-500'>
+            <li className='flex place-items-center gap-2 mb-2'>
+              <MapPin className='h-5'/>
+              Gurgaon, Haryana 
+            </li>
+            <li className='flex place-items-center gap-2 mb-2'>
+              <Phone className='h-5'/>
+              +91 7378021327 
+            </li>
+            <li className='flex place-items-center gap-2 mb-2'>
+              <Mail className='h-5'/>
+              official@graphura.in 
+            </li>
+          </ul>
         </div>
+
+        {/* Quick Links */}
         <div>
-            <h4 className='text-xl font-bold mb-3'>Quick Links</h4>
-            <ul className='text-gray-500'>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+          <h4 className='text-xl font-bold mb-3'>Quick Links</h4>
+          <ul className='text-gray-500'>
+                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
-                  <Link to="" className=''>Home</Link>
+                  <Link to="">Home</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                {/* <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="">Event</Link>
-                </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                </li> */}
+                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="">Gallery</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="">About</Link>
                 </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center'>
+                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
-            </ul>
+          </ul>
         </div>
+
+        {/* Events list */}
         <div>
-            <h4 className='text-xl font-bold mb-3'>Support</h4>
-            <ul className='text-gray-500'>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
-                  <Link to="">Help Center</Link>
-                </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
-                  <Link to="">My Account</Link>
-                </li>
-                <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out'>
-                  <Link to="">Ticket Support</Link>
-                </li>
-            </ul>
+          <h4 className='text-xl font-bold mb-3'>Events</h4>
+          <ul className='text-gray-500'>
+            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+              <ChevronRight className='h-5' />
+              <Link to="" className=''>Corporate Event</Link>
+            </li>  
+            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+              <ChevronRight className='h-5' />
+              <Link to="" className=''>Cultural Event</Link>
+            </li>  
+            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+              <ChevronRight className='h-5' />
+              <Link to="" className=''>Wedding Event</Link>
+            </li>  
+          </ul>
         </div>
         
       </div>

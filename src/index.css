@@ -7,6 +7,11 @@
 }
 
 
+/* Contact Form  */
+.contactForm{
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
 /* Footer Copyright Section */
 @media (max-width: 340px){
     .copyright ul li{
