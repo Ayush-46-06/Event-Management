@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
   const events = [
     {
       id: 1,
@@ -45,9 +47,6 @@ const Events = () => {
 
   return (
     <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100">
-      {/* <h1 className="text-[#57699b] font-bold text-2xl py-2 px-4 bg-white">
-        Cultural Events
-      </h1> */}
       <section className="banner w-full overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] mb-4">
         <img
           src="/images/cultural-banner.png"
@@ -83,22 +82,22 @@ const Events = () => {
           </nav>
         </div>
       </section>
-      <section className="event-cards">
-        <div className="px-4 py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <section className="event-cards pb-10">
+        <div className="px-8 py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="mt-3 pb-2 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ease-out transform hover:-translate-y-2 cursor-pointer"
+              className="group mt-3 pb-2 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ease-out transform hover:-translate-y-2 cursor-pointer"
             >
-              <div>
+              <div className="overflow-hidden">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="px-5 py-2">
-                <h2 className="font-bold text-xl text-[#333]">{event.title}</h2>
+                <h2 className="font-bold text-xl text-[#333] group-hover:bg-linear-to-r from-blue-500 to-purple-600 group-hover:bg-clip-text group-hover:text-transparent">{event.title}</h2>
                 <p className="text-gray-500 py-1">
                   <i className="fa-regular fa-calendar pr-2"></i> {event.date}
                 </p>
@@ -106,7 +105,7 @@ const Events = () => {
                   <i className="fa-solid fa-location-dot pr-2"></i>{" "}
                   {event.location}
                 </p>
-                <button className="mt-1 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-white w-full rounded-xl cursor-pointer">
+                <button onClick={()=>{navigate(`/cultural/${event.id}`,{state: event})}} className="mt-1 py-2 bg-linear-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white w-full rounded-xl cursor-pointer">
                   View Details
                 </button>
               </div>
