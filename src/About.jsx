@@ -35,17 +35,10 @@ const About = () => {
 
     const isMobile = useIsMobile();
 
-    const stats = [
-        { icon: <FaUsers className="text-5xl" />, value: 20000, suffix: "+", label: "Unique Users" },
-        { icon: <GiPartyPopper className="text-5xl" />, value: 10000, suffix: "+", label: "Annual Events" },
-        { icon: <IoIosStarOutline className="text-5xl" />, value: 20, suffix: "M+", label: "Reviews" },
-        { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: 10, suffix: "M+", label: "Monthly Reach" },
-    ];
-
     return (
         <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg">
             <section className="w-full bg-cover bg-center bg-no-repeat bg-[url('./images/aboutUs_bg_2.png')] py-20 md:px-32 h-[700px]">
-                <div className="mx-auto px-6">
+                <div className="mx-full px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
                         {/* LEFT TEXT BLOCK */}
@@ -80,25 +73,15 @@ const About = () => {
             <section className="py-6 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 ">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white font-semibold">
-                        {/* {[
-                            { icon: <FaUsers className="text-5xl" />, value: "20000", label: "Unique Users" },
-                            { icon: <GiPartyPopper className="text-5xl" />, value: "10000", label: "Annual Events" },
-                            { icon: <IoIosStarOutline className="text-5xl" />, value: "20", label: "Reviews" },
-                            { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: "10", label: "Monthly Reach" },
-                        ] */}
-                        {stats.map((item, i) => (
+                        {[
+                            { icon: <FaUsers className="text-5xl" />, value: "20000+", label: "Unique Users" },
+                            { icon: <GiPartyPopper className="text-5xl" />, value: "10000+", label: "Annual Events" },
+                            { icon: <IoIosStarOutline className="text-5xl" />, value: "20M+", label: "Reviews" },
+                            { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: "10M+", label: "Monthly Reach" },
+                        ].map((item, i) => (
                             <div key={i} className="flex flex-col items-center gap-3">
                                 {item.icon}
-                                <h2 className="text-3xl">
-                                    {item.value}
-                                    {/* <CountUp
-                                        start={0}
-                                        end={item.value}
-                                        duration={2.5}
-                                        separator=","
-                                    /> */}
-                                    {item.suffix}
-                                </h2>
+                                <h2 className="text-3xl">{item.value}</h2>
                                 <p className="text-xl">{item.label}</p>
                             </div>
                         ))}
