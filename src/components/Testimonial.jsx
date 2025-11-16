@@ -38,7 +38,7 @@ const Testimonial = () => {
                 <h2 className="text-4xl font-bold mb-12 text-indigo-900 tracking-wide">
                     What Our Clients Say About Us
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 mx-auto mb-8"></div>
+                <div className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400"></div>
 
                 <Swiper
                     modules={[Pagination, Autoplay]}
@@ -54,7 +54,7 @@ const Testimonial = () => {
                 >
                     {testimonials.map((t, i) => (
                         <SwiperSlide key={i}>
-                            <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 backdrop-blur-lg shadow-lg rounded-2xl p-6 
+                            <div className="bg-white/70 backdrop-blur-lg shadow-lg rounded-2xl p-6 
                 border border-white/40 text-left flex flex-col items-start 
                 hover:-translate-y-2 transition-all duration-300">
 
@@ -62,7 +62,7 @@ const Testimonial = () => {
                                     “{t.text}”
                                 </p>
 
-                                <div className="flex items-center gap-4 bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100">
+                                <div className="flex items-center gap-4">
                                     <img
                                         src={t.img}
                                         alt={t.name}

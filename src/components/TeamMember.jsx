@@ -49,7 +49,7 @@ const team = [
 const TeamMember = () => {
     return (
         <section className="py-16 bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg">
-            <div className="max-w-7xl mx-auto px-6 py-6">
+            <div className="max-w-7xl mx-auto px-6 ">
 
                 {/* Section Heading */}
                 <motion.h2
@@ -70,7 +70,7 @@ const TeamMember = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg backdrop-blur-lg shadow-lg hover:shadow-2xl transition p-6 flex flex-col items-center text-center"
+                            className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg backdrop-blur-lg rounded shadow-lg hover:shadow-2xl transition p-6 flex flex-col items-center text-center"
                         >
                             {/* Image */}
                             <img

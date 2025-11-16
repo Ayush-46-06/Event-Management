@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import TeamMember from './components/TeamMember';
 import AboutUs from './components/AboutUs';
 import Testimonial from './components/testimonial';
+import CountUp from 'react-countup';
 
 
 const useIsMobile = () => {
@@ -29,14 +30,22 @@ const useIsMobile = () => {
 
 
 
+
 const About = () => {
 
     const isMobile = useIsMobile();
 
+    const stats = [
+        { icon: <FaUsers className="text-5xl" />, value: 20000, suffix: "+", label: "Unique Users" },
+        { icon: <GiPartyPopper className="text-5xl" />, value: 10000, suffix: "+", label: "Annual Events" },
+        { icon: <IoIosStarOutline className="text-5xl" />, value: 20, suffix: "M+", label: "Reviews" },
+        { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: 10, suffix: "M+", label: "Monthly Reach" },
+    ];
+
     return (
         <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg">
-            <section className="w-full bg-cover bg-center bg-no-repeat bg-[url('./images/aboutUs_bg_1.png')] py-20 md:px-32 h-[700px]">
-                <div className="mx-full px-6">
+            <section className="w-full bg-cover bg-center bg-no-repeat bg-[url('./images/aboutUs_bg_2.png')] py-20 md:px-32 h-[700px]">
+                <div className="mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
                         {/* LEFT TEXT BLOCK */}
@@ -62,7 +71,6 @@ const About = () => {
                                 every detail is shaped with passion and precision to create moments
                                 that spark joy, build memories, and tell stories worth remembering".
                             </motion.p>
-
                         </div>
                     </div>
                 </div>
@@ -72,25 +80,26 @@ const About = () => {
             <section className="py-6 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 ">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white font-semibold">
-                        {[
-                            { icon: <FaUsers className="text-5xl" />, value: "20,000+", label: "Unique Users" },
-                            { icon: <GiPartyPopper className="text-5xl" />, value: "10,000+", label: "Annual Events" },
-                            { icon: <IoIosStarOutline className="text-5xl" />, value: "20M+", label: "Reviews" },
-                            { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: "10M+", label: "Monthly Reach" },
-                        ].map((item, i) => (
+                        {/* {[
+                            { icon: <FaUsers className="text-5xl" />, value: "20000", label: "Unique Users" },
+                            { icon: <GiPartyPopper className="text-5xl" />, value: "10000", label: "Annual Events" },
+                            { icon: <IoIosStarOutline className="text-5xl" />, value: "20", label: "Reviews" },
+                            { icon: <LiaNetworkWiredSolid className="text-5xl" />, value: "10", label: "Monthly Reach" },
+                        ] */}
+                        {stats.map((item, i) => (
                             <div key={i} className="flex flex-col items-center gap-3">
                                 {item.icon}
-                                <h2 className="text-3xl">{item.value}</h2>
-                                {/* <CountUp
-                                    start={0}
-                                    end={item.value}
-                                    duration={2.5}
-                                    separator=","
-                                    suffix={item.suffix}
-                                    enableScrollSpy
-                                    scrollSpyOnce
-                                /> */}
-                                <p className="text-lg">{item.label}</p>
+                                <h2 className="text-3xl">
+                                    {item.value}
+                                    {/* <CountUp
+                                        start={0}
+                                        end={item.value}
+                                        duration={2.5}
+                                        separator=","
+                                    /> */}
+                                    {item.suffix}
+                                </h2>
+                                <p className="text-xl">{item.label}</p>
                             </div>
                         ))}
                     </div>
@@ -101,10 +110,10 @@ const About = () => {
             {/* Our Mission & Our Vision */}
             <section className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 py-16 px-6">
                 <div className="container mx-auto px-4 ">
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-6xl mx-auto ">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-6xl mx-auto rounded-2xl">
 
                         {/* Our Mission */}
-                        <div className="w-full md:w-1/2 text-center ">
+                        <div className="w-full md:w-1/2 text-center bg-white/70 rounded-2xl">
                             <div className=" rounded-2xl shadow-xl p-10 text-center">
                                 <motion.h2
                                     initial={{ opacity: 0 }}
@@ -121,10 +130,7 @@ const About = () => {
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1.2, ease: "easeInOut" }}
                                         className="text-lg md:text-xl leading-relaxed"
-                                    >
-                                        At our company, we believe every occasion is a chance to create unforgettable experiences and
-                                        meaningful connections. Our mission is to turn your vision into reality through seamless,
-                                        creative, and impactful event management solutions that go beyond expectations.
+                                    >At Event, we believe every occasion is an opportunity to create unforgettable moments and meaningful connections. With years of experience and a strong record of delivering successful corporate, cultural, and community events, we turn your vision into a seamless and memorable experience.
                                     </motion.p>
                                     <motion.p
                                         initial={{ opacity: 0 }}
@@ -132,26 +138,14 @@ const About = () => {
                                         transition={{ duration: 1.2, ease: "easeInOut" }}
                                         className="text-lg md:text-xl leading-relaxed"
                                     >
-                                        With years of expertise and a proven track record of organizing hundreds of successful events
-                                        from corporate conferences and tech summits to cultural festivals and community celebrations,
-                                        we bring professionalism, passion, and precision to every project.
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ opacity: 0 }}
-                                        whileInView={{ opacity: 1 }}
-                                        transition={{ duration: 1.2, ease: "easeInOut" }}
-                                        className="text-lg md:text-xl leading-relaxed"
-                                    >
-                                        Our team of dedicated event specialists ensures that every element, from planning to execution,
-                                        is handled with care and creativity. At Event, we combine innovation, meticulous attention to
-                                        detail, and a commitment to excellence to make your event truly exceptional.
+                                        Our dedicated team brings creativity, precision, and professionalism to every project ensuring every detail is thoughtfully planned and flawlessly executed. We combine innovation and excellence to make every event truly exceptional.
                                     </motion.p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Our Vision */}
-                        <div className="w-full md:w-1/2 text-center ">
+                        <div className="w-full md:w-1/2 text-center bg-white/70 rounded-2xl">
                             <div className=" rounded-2xl shadow-xl p-10 text-center">
                                 <motion.h2
                                     initial={{ opacity: 0 }}
@@ -169,30 +163,21 @@ const About = () => {
                                         transition={{ duration: 1.2, ease: "easeInOut" }}
                                         className="text-lg md:text-xl leading-relaxed"
                                     >
-                                        At our company, our vision is to become a leading name in the world of event management by
-                                        creating experiences that go beyond expectations. We believe that every event tells a story
-                                        one that deserves to be celebrated with creativity, passion, and perfection.
-                                    </motion.p>
+                                        At Event, our vision is to become a leading name in event management by creating experiences that exceed expectations. We believe every event tells a story one that deserves creativity, passion, and perfection.</motion.p>
                                     <motion.p
                                         initial={{ opacity: 0 }}
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1.2, ease: "easeInOut" }}
                                         className="text-lg md:text-xl leading-relaxed"
                                     >
-                                        We aim to redefine the standards of event management by blending innovative ideas with seamless
-                                        execution. Whether it’s an elegant wedding, a high-impact corporate meet, a dynamic exhibition,
-                                        or a grand celebrity concert, we focus on delivering excellence in every detail.
-                                    </motion.p>
+                                        We blend fresh ideas with seamless execution, delivering excellence across weddings, corporate meets, exhibitions, and concerts. With a focus on innovation and efficiency, we adapt to modern trends to provide memorable event solutions.</motion.p>
                                     <motion.p
                                         initial={{ opacity: 0 }}
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1.2, ease: "easeInOut" }}
-                                        className="text-lg md:text-xl leading-relaxed"
+                                        className="text-lg md:text-lg leading-relaxed font-bold"
                                     >
-                                        Driven by dedication and innovation, we continuously evolve with changing trends and technologies
-                                        to provide modern, efficient, and memorable event solutions. Our ultimate goal is to build lasting
-                                        relationships with our clients by turning their special moments into unforgettable experiences.
-                                    </motion.p>
+                                        "We turn special moments into lasting connections."</motion.p>
                                 </div>
                             </div>
                         </div>
@@ -203,9 +188,7 @@ const About = () => {
 
 
             {/* Events Section */}
-
-            <section className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 overflow-hidden w-full
-">
+            <section className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 overflow-hidden w-full">
                 <div className="container mx-auto flex flex-col justify-center items-center">
                     <div className='grid grid-cols-1 gap-16 mt-12'>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:px-10 p-18">
