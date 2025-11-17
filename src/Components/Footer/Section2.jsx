@@ -32,7 +32,7 @@ const Section2 = () => {
           <ul className='text-gray-500'>
                 <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
-                  <Link to="">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 {/* <li className='hover:text-black cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
@@ -40,11 +40,11 @@ const Section2 = () => {
                 </li> */}
                 <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
-                  <Link to="">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
-                  <Link to="">About</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
@@ -59,16 +59,16 @@ const Section2 = () => {
           <ul className='text-gray-500'>
             <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
               <ChevronRight className='h-5' />
-              <Link to="" className=''>Corporate Event</Link>
+              <Link to="/event/corporateevents" className=''>Corporate Event</Link>
             </li>  
             <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
               <ChevronRight className='h-5' />
-              <Link to="" className=''>Cultural Event</Link>
+              <Link to="/event/cultural" className=''>Cultural Event</Link>
             </li>  
-            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+            {/* <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
               <ChevronRight className='h-5' />
               <Link to="" className=''>Wedding Event</Link>
-            </li>  
+            </li>   */}
           </ul>
         </div>
         
