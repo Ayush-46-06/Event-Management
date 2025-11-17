@@ -26,7 +26,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className='w-full bg-gray-50 mb-16'>
+      <div className='w-full bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 mb-16'>
         <Form />
       </div>
 
