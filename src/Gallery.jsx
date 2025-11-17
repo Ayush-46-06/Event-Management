@@ -1,109 +1,136 @@
-import React from 'react'
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import LightGallery from "lightgallery/react";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
 
+const categories = ["All", "Corporate", "Cultural", "Tech", "Private", "Exhibitions"];
+
+const galleryData = {
+    Corporate: [
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600",
+        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600",
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+        "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=600",
+    ],
+    Cultural: [
+        "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=600",
+        "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600",
+        "https://images.unsplash.com/photo-1482849297070-f4fae2173efe?w=600",
+        "https://i.pinimg.com/1200x/49/62/d1/4962d15328ee2c9aafdfeb46f2d5955a.jpg",
+    ],
+    Private: [
+        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600",
+        "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600",
+        "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600",
+        "https://images.unsplash.com/photo-1519741497674-611481863552?w=600",
+    ],
+    Exhibitions: [
+        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600",
+        "https://images.unsplash.com/photo-1482849297070-f4fae2173efe?w=600",
+        "https://images.unsplash.com/photo-1542744095-291d1f67b221?w=600",
+        "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600",
+    ],
+    Tech: [
+        "https://images.unsplash.com/photo-1542744095-291d1f67b221?w=600",
+        "https://images.unsplash.com/photo-1542744095-291d1f67b221?w=6000",
+        "https://images.unsplash.com/photo-1542744095-291d1f67b221?w=600",
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600",
+    ],
+}
 
 const Gallery = () => {
-    [
-        {
-            name: "John Smith",
-            role: "CEO & Founder",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-            description:
-                "With over 15 years of experience in event management, John leads our team with passion and vision.",
-        },
-        {
-            name: "Sarah Johnson",
-            role: "Event Director",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-            description:
-                "Sarah brings creativity and precision to every event, ensuring flawless execution from planning to completion.",
-        },
-        {
-            name: "Michael Chen",
-            role: "Technical Lead",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-            description:
-                "Michael ensures our digital platforms run smoothly, providing seamless experiences for both organizers and attendees.",
-        },
-        {
-            name: "Emily Rodriguez",
-            role: "Marketing Manager",
-            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-            description:
-                "Emily drives our marketing strategy, helping events reach wider audiences and maximize engagement.",
-        },
-        {
-            name: "David Kim",
-            role: "Operations Manager",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-            description:
-                "David oversees day-to-day operations, ensuring flawless coordination and smooth execution.",
-        },
-        {
-            name: "Lisa Anderson",
-            role: "Customer Success",
-            image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-            description:
-                "Lisa provides exceptional client support, ensuring every event exceeds expectations.",
-        },
-    ];
+
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+
+    const categoriesToShow =
+        selectedCategory === "All"
+            ? Object.keys(galleryData)
+            : [selectedCategory];
 
     return (
-        <section className="py-16 bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg flex justify-center">
-            <div className="max-w-7xl mx-auto px-6 flex items-center">
-
-                {/* Section Heading */}
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1.2 }}
-                    className="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12"
+        <section className="py-20 bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100 min-h-screen">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                {/* Heading */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-center mb-12"
                 >
-                    Events Gallery
-                </motion.h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 mx-auto mb-8"></div>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-900 tracking-tight">
+                        Events Gallery
+                    </h2>
+                    <div className="w-28 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 mx-auto mt-3 rounded-full"></div>
+                    <p className="max-w-3xl mx-auto mt-4 text-lg md:text-xl text-indigo-800 leading-relaxed">
+                        Explore moments captured across our corporate, cultural, private, and exhibition events.
+                    </p>
+                </motion.div>
 
-                <motion.p className='max-w-3xl text-center text-lg text-indigo-800 mb-16 px-4 flex justify-center'>
-                    Our gallery showcases the unforgettable moments we’ve created across weddings, corporate events, concerts, exhibitions, and more. Every picture reflects our passion for creativity, detail, and flawless execution.
-                </motion.p>
 
-                {/* Team Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
-                    {team.map((member, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg backdrop-blur-lg rounded shadow-lg hover:shadow-2xl transition p-6 flex flex-col items-center text-center"
+                {/* Filter Section */}
+                <div className="flex flex-wrap justify-center gap-4 mb-10">
+                    {categories.map((cat) => (
+                        <button
+                            key={cat}
+                            onClick={() => setSelectedCategory(cat)}
+                            className={`px-6 py-2 rounded-full text-lg font-semibold shadow-md transition-all duration-300 backdrop-blur-lg border
+${selectedCategory === cat
+                                    ? "bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white border-transparent scale-105"
+                                    : "bg-white/70 text-indigo-900 border-indigo-200 hover:shadow-lg"}
+`}
                         >
-                            {/* Image */}
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-40 h-40 rounded-full object-cover shadow-md mb-4 transition-transform duration-700 hover:scale-105"
-                            />
-
-                            {/* Name */}
-                            <h3 className="text-xl font-bold text-indigo-900 mb-1">
-                                {member.name}
-                            </h3>
-
-                            {/* Role */}
-                            <p className="text-md font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
-                                {member.role}
-                            </p>
-
-                            {/* Description */}
-                            <p className="text-indigo-800 text-sm leading-relaxed">
-                                {member.description}
-                            </p>
-                        </motion.div>
+                            {cat}
+                        </button>
                     ))}
                 </div>
+
+
+                {/* Gallery Sections: only render categoriesToShow */}
+                {categoriesToShow.map((category) => (
+                    <div key={category} className="mb-20">
+                        <h3 className="text-3xl font-bold text-indigo-900 mb-6 text-center">
+                            {category} Events
+                        </h3>
+
+
+                        {/* Images Grid with Lightbox */}
+                        <LightGallery speed={500} plugins={[lgZoom, lgThumbnail]}>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                                {galleryData[category].slice(0, 3).map((img, idx) => (
+                                    <a href={img} key={idx} className="block">
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.95 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.5, delay: idx * 0.08 }}
+                                            className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-300"
+                                        >
+                                            <img src={img} alt={`${category} event ${idx + 1}`} className="w-full h-64 object-cover" />
+                                        </motion.div>
+                                    </a>
+                                ))}
+                            </div>
+                        </LightGallery>
+
+
+                        {/* Show More Button */}
+                        <div className="text-center mt-6">
+                            <button
+                                onClick={() => alert(`Show more clicked for ${category} events`)}
+                                className="px-8 py-3 rounded-full text-white font-semibold text-lg bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 shadow-lg hover:scale-105 transition-all cursor-pointer"
+                            >
+                                Show More
+                            </button>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
-    );
+    )
 };
 
 export default Gallery;
