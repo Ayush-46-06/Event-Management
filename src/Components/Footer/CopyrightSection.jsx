@@ -6,7 +6,7 @@ const CopyrightSection = () => {
     <div className='mt-3 grid justify-center copyright'>
         <h4 className='mb-3 md:text-[16px] text-[14px]'>&copy; 2025 Graphura India Private Limited. All Rights Reserved.</h4>
 
-        <ul className='flex gap-5 text-gray-500 justify-center'>
+        <ul className='flex gap-5 text-gray-400 justify-center'>
             <li className='hover:text-white cursor-pointer md:text-[16px] text-[13px]'>
                 <Link to=''>Term of Service</Link>
             </li>

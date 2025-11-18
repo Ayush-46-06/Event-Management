@@ -18,3 +18,35 @@
         font-size: 10px;
     }
 }
+
+:root {
+    /* --background: #f2f2f2; */
+    --text: #010004;
+    --btn: #57699b;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 8px;
+}
+
+/* Thumb - vertical gradient */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-image: linear-gradient(180deg, #a78bfa 0%, #006AE1 50%, #fb7185 100%);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background-clip: padding-box;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    filter: brightness(0.9);
+}

@@ -10,7 +10,7 @@ const Section2 = () => {
         {/* Head Office address */}
         <div>
           <h4 className='text-xl font-bold mb-3'>Head Office</h4>
-          <ul className='text-gray-500'>
+          <ul className='text-gray-300'>
             <li className='flex place-items-center gap-2 mb-2'>
               <MapPin className='h-5'/>
               Gurgaon, Haryana 
@@ -29,8 +29,8 @@ const Section2 = () => {
         {/* Quick Links */}
         <div>
           <h4 className='text-xl font-bold mb-3'>Quick Links</h4>
-          <ul className='text-gray-500'>
-                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+          <ul className='text-gray-300'>
+                <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="/">Home</Link>
                 </li>
@@ -38,15 +38,15 @@ const Section2 = () => {
                   <ChevronRight className='h-5' />
                   <Link to="">Event</Link>
                 </li> */}
-                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+                <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="/gallery">Gallery</Link>
                 </li>
-                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+                <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="/about">About</Link>
                 </li>
-                <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+                <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
                   <ChevronRight className='h-5' />
                   <Link to="/contact">Contact Us</Link>
                 </li>
@@ -56,12 +56,12 @@ const Section2 = () => {
         {/* Events list */}
         <div>
           <h4 className='text-xl font-bold mb-3'>Events</h4>
-          <ul className='text-gray-500'>
-            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+          <ul className='text-gray-300'>
+            <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
               <ChevronRight className='h-5' />
               <Link to="/event/corporateevents" className=''>Corporate Event</Link>
             </li>  
-            <li className='hover:text-white cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
+            <li className='hover:text-white hover:font-semibold cursor-pointer hover:pl-[9px] transition duration-150 ease-in-out flex place-items-center mb-1'>
               <ChevronRight className='h-5' />
               <Link to="/event/cultural" className=''>Cultural Event</Link>
             </li>  
@@ -77,7 +77,7 @@ const Section2 = () => {
       {/* Right Content */}
       <div className='right xl:px-25 mb-10'>
         <h4 className='text-xl font-bold mb-3'>Subscribe</h4>
-        <p className='text-gray-500 mb-2'>Get exclusive deals by signing up to our Portal.</p>
+        <p className='text-gray-300 mb-2'>Get exclusive deals by signing up to our Portal.</p>
         
         <div className='flex flex-col gap-2'>
             <input type="email" className='border-2 border-gray-400 rounded-md p-2 xl:w-full sm:w-1/2 w-[75%]' placeholder='Enter your email' required/>

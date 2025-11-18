@@ -3,12 +3,14 @@ import {Route, Routes} from 'react-router-dom'
 import Contact from './Pages/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import GalleryDetailsPage from './Pages/GalleryDetailPage'
+import Gallery from './Pages/Gallery'
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path='/contact' element={<Contact />} />
+        <Route path='/gallery' element={<Gallery />} />
         <Route path="/gallery/:category" element={<GalleryDetailsPage />} />
       </Routes>
       <Footer />

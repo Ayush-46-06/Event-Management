@@ -5,7 +5,7 @@ import Map from './Map';
 
 const Contact = () => {
   return (
-    <section className="w-full">
+    <section className="w-full bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100">
       <div className="relative w-full h-[65vh] overflow-hidden">
         <img
           src={banner}
@@ -26,7 +26,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className='w-full bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 mb-16'>
+      <div className='w-full'>
         <Form />
       </div>
 
