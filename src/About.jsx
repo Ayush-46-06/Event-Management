@@ -37,7 +37,7 @@ const About = () => {
 
     return (
         <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 rounded-lg">
-            <section className="w-full bg-cover bg-center bg-no-repeat bg-[url('./images/aboutUs_bg_2.png')] py-20 md:px-32 h-[700px]">
+            <section className="w-full bg-cover bg-center bg-no-repeat bg-[url('./images/aboutUs_bg_2.png')] py-20 md:px-32 h-[750px]">
                 <div className="mx-full px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
