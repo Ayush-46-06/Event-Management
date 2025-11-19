@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CopyrightSection = () => {
   return (
     <div className='mt-3 grid justify-center copyright'>
-        <h4 className='mb-3 md:text-[16px] text-[14px]'>&copy; 2025 Graphura India Private Limited. All Rights Reserved.</h4>
+        <h4 className='mb-3 md:text-[17px] text-[14px] font-bold'>Copyright 2025 <span className='text-[#3996B9]'> Graphura India Private Limited.</span> All Rights Reserved.</h4>
 
         <ul className='flex gap-5 text-gray-400 justify-center'>
             <li className='hover:text-white cursor-pointer md:text-[16px] text-[13px]'>
