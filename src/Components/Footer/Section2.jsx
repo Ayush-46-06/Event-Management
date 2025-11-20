@@ -75,7 +75,7 @@ const Section2 = () => {
       </div>
 
       {/* Right Content */}
-      <div className='right xl:px-25 mb-10'>
+      {/* <div className='right xl:px-25 mb-10'>
         <h4 className='text-xl font-bold mb-3'>Subscribe</h4>
         <p className='text-gray-300 mb-2'>Get exclusive deals by signing up to our Portal.</p>
         
@@ -83,7 +83,7 @@ const Section2 = () => {
             <input type="email" className='border-2 border-gray-400 rounded-md p-2 w-full' placeholder='Enter your email' required/>
             <button className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-2 rounded-md w-full cursor-pointer hover:scale-105 transition duration-300 ease-in-out'>Sign Up</button>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
